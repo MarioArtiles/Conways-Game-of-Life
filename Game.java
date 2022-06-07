@@ -13,6 +13,7 @@ public class Game {
 	// public static String liveChance;  // JOptionPane.showInputDialog("What percent chance will each cell have to start alive(from 1 to 80 only)?");
 	public static int chance; // Integer.parseInt(liveChance);
 	
+	// runs the program with user interface(joptionpane)
 	public static void main(String[] args) throws Exception{
 		// TODO Auto-generated method stub
 		try
@@ -175,6 +176,7 @@ public class Game {
 	
 
 		
+	// sets a random amount cells in the array of cells to true based on a percentage given by user. 
 	
 	public static void GiveLife() {
 		int cnt = 0;
@@ -196,6 +198,8 @@ public class Game {
 		//System.out.println((double)cnt/(row*col));
 	}
 	
+	// uses the array of cells to display an alive cell as " @ " and a dead cell as " 0 "
+	
 	private static String drawMap(boolean[][] Map) {
 		Cells = Map;
 		String map = "";
@@ -214,6 +218,8 @@ public class Game {
 		}
 		return map;
 	}
+	
+	// loads a new generation of cells based on the rules of Conway's game of life
 	
 	public static void NextGen(boolean[][] lastGen){
 		//JOptionPane.showMessageDialog(null, drawMap(Cells));
